@@ -12,7 +12,9 @@ Therefore **before jumping into possible premature optimization, make sure you r
 # Context and strategies
 Every strategy is implemented in a different app with its own store, reducers, middleware etc. Every app use the same (fake) api that return more than a thousand of entities.
 
-A global web page that features all the apps is available at [https://mbret.github.io/redux-state-memory-management-showcase/](https://mbret.github.io/redux-state-memory-management-showcase/) to help you visualize and understand all the different approach. 
+A global web page that features all the apps is available at [https://mbret.github.io/redux-state-memory-management-showcase/](https://mbret.github.io/redux-state-memory-management-showcase/) to help you visualize and understand all the different approach.
+
+**Note: It's better to use mobile mode (touchscreen) to visualize the behaviors**
 
 - [Strategy on release](https://github.com/mbret/redux-state-memory-management-showcase/tree/master/src/app-on-release) (Clean the entities from the state as soon as no one is using them anymore)
 - [Strategy on timeout](https://github.com/mbret/redux-state-memory-management-showcase/tree/master/src/app-on-timeout) (Clean the entities from the state as soon as no one is using it and after a timeout)
