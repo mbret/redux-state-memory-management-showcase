@@ -51,7 +51,12 @@ export const onThresholdStrategyMiddleware = ({ getState, dispatch }) => (next) 
     }
   }
 
-  if (action.type === '@entityHolder/RELEASE_ENTITY') {
+  // Apply for cleanup every time an item is released
+  // or an item is added
+  if (
+    action.type === '@entityHolder/RELEASE_ENTITY'
+    || action.type === 'ADD_THRESHOLD_ENTITY'
+    ) {
     // Threshold reached, try to do some cleanup
     if (thresholdReached(state) && activeHolders(state) < thresholdLoad(state)) {
       // Try to remove the first possible value
@@ -95,7 +100,7 @@ const entitiesReducer = (state = { byId: {}, allIds: [] }, action) => {
   }
 }
 
-const retentionReducer = (state = { stack: [], threshold: 15 }, action) => {
+const retentionReducer = (state = { stack: [], threshold: 25 }, action) => {
   switch (action.type) {
     // In case of retrieve, we need to cleanup the stack if needed
     case 'ADD_THRESHOLD_ENTITY': {

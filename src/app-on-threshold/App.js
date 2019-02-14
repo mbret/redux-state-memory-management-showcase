@@ -16,6 +16,11 @@ const _AppInfo = ({ stateSize, nbEntities, nbHolders, thresholdLoad, threshold }
         <tr><td>Threshold load</td><td>{thresholdLoad} on ({threshold})</td></tr>
       </tbody>
     </table>
+    <a
+      style={{ fontWeight: "bold" }}
+      href="https://github.com/mbret/redux-state-memory-management-showcase/tree/master/src/app-on-threshold">
+      READ ME
+    </a>
   </div>
 )
 

@@ -7,10 +7,11 @@ import { App as AppOnThreshold } from './app-on-threshold/App';
 export const App = () => {
   return (
     <div>
+      <h2 style={{ color: "orange" }}>Use phone mode (with touch) for a better understanding</h2>
+      <AppOnThreshold />
       {/* <AppOnGC /> */}
       <AppOnRelease />
       <AppOnTimeout />
-      <AppOnThreshold />
     </div>
   )
 }
